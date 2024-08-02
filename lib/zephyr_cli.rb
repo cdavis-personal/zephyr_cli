@@ -1,12 +1,11 @@
 # frozen_string_literal: true
 
-require "zephyr_ruby"
-require "thor"
-require "nokogiri"
-
-require_relative "zephyr_cli/test_plans"
-require_relative "zephyr_cli/test_cycles"
+require 'zephyr_ruby'
+require 'thor'
+require 'nokogiri'
 require_relative "zephyr_cli/version"
+require_relative "zephyr_cli/test_cycles"
+require_relative "zephyr_cli/test_plans"
 
 @zephyr_client = ZephyrRuby::Client.new(ENV["ZEPHYR_API_KEY"])
 
