@@ -8,3 +8,12 @@ Style/StringLiteralsInInterpolation:
 
 Layout/LineLength:
   Max: 120
+
+Metrics/ParameterLists:
+  Max: 10
+
+AllCops:
+  SuggestExtensions: false
+  TargetRubyVersion: 2.3
+  NewCops: disable
+
