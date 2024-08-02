@@ -45,5 +45,3 @@ class TestCycles < Thor
     # TODO: Implement logic for updating test cycle
   end
 end
-
-ZephyrCLI.start(ARGV)
