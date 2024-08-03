@@ -22,5 +22,4 @@ class TestPlans < Thor
   def update_test_plan(test_plan_id, name, description, start_date, end_date, project_id)
     # TODO: Implement logic for updating test plan
   end
-
 end
