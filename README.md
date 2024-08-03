@@ -1,4 +1,4 @@
-# ZephyrCli
+# ZephyrCLI
 
 The handy CLI for managing all your zephyr related testing resources.
 
