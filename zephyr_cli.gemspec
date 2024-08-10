@@ -4,7 +4,7 @@ require_relative "lib/zephyr_cli/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "zephyr_cli"
-  spec.version       = ZephyrCli::VERSION
+  spec.version       = ZephyrCLI::VERSION
   spec.authors       = ["Chris Davis"]
 
   spec.summary       = "Zephyr CLI"
