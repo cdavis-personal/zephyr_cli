@@ -20,7 +20,7 @@ class TestCycles < Thor
   method_option :name, type: :string, required: true
   method_option :description, type: :string, required: false
   method_option :auto_create_test_cases, type: :boolean, required: false
-  def upload_cucumber_results(_test_cycle_id, _cucumber_format)
+  def upload_cucumber_results(project_id, file, auto_close_cycle, name, description, auto_create_test_cases)
     payload = generate_automations_payload(project_id, file, auto_close_cycle, name, description,
                                            auto_create_test_cases)
     @zephyr_client.create_automation_cucumber(payload)
