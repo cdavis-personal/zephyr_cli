@@ -4,22 +4,15 @@
 class TestPlans < Thor
   desc "create", "Create test plan"
   method_option :name, type: :string, required: true
-  method_option :description, type: :string, required: true
-  method_option :start_date, type: :string, required: true
-  method_option :end_date, type: :string, required: true
   method_option :project_id, type: :numeric, required: true
-  def create_test_plan(name, description, start_date, end_date, project_id)
-    # TODO: Implement logic for creating test plan
-  end
-
-  desc "update", "Update test plan"
-  method_option :test_plan_id, type: :numeric, required: true
-  method_option :name, type: :string, required: true
-  method_option :description, type: :string, required: true
-  method_option :start_date, type: :string, required: true
-  method_option :end_date, type: :string, required: true
-  method_option :project_id, type: :numeric, required: true
-  def update_test_plan(test_plan_id, name, description, start_date, end_date, project_id)
-    # TODO: Implement logic for updating test plan
+  method_option :description, type: :string
+  method_option :objective, type: :string
+  method_option :folder_id, type: :string
+  method_option :status_name, type: :string
+  method_option :owner_id, type: :string
+  method_option :labels, type: :string
+  def create_test_plan(name, project_id, description, objective, folder_id, status_name, owner_id, labels)
+    testplan_payload = generate_test_plan_payload(project_id, name, objective, folder_id, status_name, owner_id, labels)
+    @zephyr_client.create_testplan(testplan_payload)
   end
 end

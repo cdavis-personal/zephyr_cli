@@ -26,4 +26,16 @@ module CLIHelpers
       projectId: project_id
     }
   end
+
+  def generate_test_plan_payload(project_key, name, objective, folder_id, status_name, owner_id, labels, custom_fields)
+    {
+      projectKey: project_key,
+      name: name,
+      objective: objective,
+      folderId: folder_id,
+      statusName: status_name,
+      ownerId: owner_id,
+      labels: labels,
+      customFields: {}
+    }
 end
